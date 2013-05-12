@@ -42,4 +42,12 @@ public class PerjalananTransportModel {
         return db.selectQuery(query);
     }
     
+    public ResultSet getTransportasiPerjalanan(String dariKota, String dariProv, 
+            String keKota, String keProv, String maskapai){
+        query = "select * from transportasiperjalanan where darikota='"+dariKota+"' and "
+                + "dariProvinsi ='"+dariProv+"' and kekota = '"+keKota+"' and "
+                + "keProv = '"+keProv+"' and namamaskapai ='"+maskapai+"'";
+        return db.selectQuery(query);
+    }
+    
 }
