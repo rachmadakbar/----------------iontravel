@@ -6,6 +6,9 @@ package model;
 
 import helper.DBConnector;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,6 +23,17 @@ public class UserModel {
         query = "select * from user where username ='"+username+"' and "
                 + "password = '"+password+"'";
         return db.selectQuery(query);
+    }
+    
+        public boolean isAlreadyExist(String username){
+        query = "select count(*) as c from user where username ='"+username+"'";
+        boolean status = false;
+        try {
+            status = (db.selectQuery(query).getInt("c")) == 1;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return status;
     }
     
     public ResultSet getAllCustomer(){

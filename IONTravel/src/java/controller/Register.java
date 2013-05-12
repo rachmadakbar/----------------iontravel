@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.UserModel;
 
 /**
  *
@@ -33,6 +34,11 @@ public class Register extends HttpServlet {
             status = 2;
         } else if (!this.username.matches("[A-Za-z0-9]+")) {
             status = 3;
+        } else {
+            UserModel user = new UserModel();
+            if(user.isAlreadyExist(username)) {
+                status = 4;
+            }
         }
         return status;
     }
@@ -132,8 +138,10 @@ public class Register extends HttpServlet {
                     request.setAttribute("usernameError", "Mohon mengisi username Anda!");
                 } else if (data[0] == 2) {
                     request.setAttribute("usernameError", "Username Anda harus harus lebih dari 5 karakter!");
-                } else {
+                } else if(data[0] == 3) {
                     request.setAttribute("usernameError", "Username Anda hanya bisa terdiri dari kombinasi huruf dan angka!");
+                }else {
+                    request.setAttribute("usernameError", "Username sudah digunakan pengguna lain!");
                 }
             }
 
