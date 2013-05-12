@@ -1,0 +1,83 @@
+/* home */
+
+#noaccount {
+margin-top:45px; margin-bottom:-25px; height:88px; 
+}
+
+#signup {
+margin-top:-10px; float: right; color:#fff
+}
+
+/* register */
+
+#input_signup {
+margin-left:20px; width:50x; margin-top:10px; height:30px
+}
+
+/* search result */
+
+#titlesearch {
+ font-size:40pt
+}
+
+#keyword {
+color: #055702; font-size:xx-large
+}
+
+#keybox {
+margin-top:-20px; margin-left:20px; margin-bottom:20px
+}
+
+#allres {
+margin-left:30px;  height:100%
+}
+
+#resultplace{
+font-size:30pt; margin-bottom:10px; margin-top:25px
+}
+#resultlocation{
+font-size:15pt; margin-top:10px; 
+}
+#resultbox{
+background-color:rgba(231,231,231,0.4);color:#ffffff;box-shadow:0 0 5px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, .4); height:108px;  width:850px; padding:10px; margin-bottom:10px
+}
+#resultbox:hover {
+color:#055702;background-color:rgba(13,93,7,0.2);
+}
+.resultbox {
+color:#055702;
+}
+.resultbox:hover {
+text-decoration:none; 
+}
+
+/* Tourism Destination Profile */
+
+#desclabel{
+	font-size:medium; color:#ffcc00
+}
+
+#desc {
+	padding:20px; font-size:large; color:#ffffff
+}
+
+#descimage{
+float:right; margin-right:30px; margin-top:20px
+}
+
+#descsontent{
+float:left; margin-left:100px
+}
+
+#editdesc {
+margin-top:20px;
+}
+
+/* user_profile */
+
+#editdesc2 {
+margin-top:20px; float:right
+}
+
+
+/* paket_perjalanan */
