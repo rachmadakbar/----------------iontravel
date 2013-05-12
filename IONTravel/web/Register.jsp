@@ -64,79 +64,79 @@
                                                 <tr  id="input_signup">
                                                     <td><span>Username:</span></td>
                                                     <td><input type="text" name="id"><c:if test="${not empty usernameError}">${usernameError}</c:if></td>
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Password:</span></td>
-                                                    <td><input type="text" name="pwd"><c:if test="${not empty passwordError}">${passwordError}</c:if></td>								
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Repeat Password:</span></td>
-                                                    <td><input type="text" name="pwd2"></td>								
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Fullname:</span></td>
-                                                    <td><input type="text" name="name"><c:if test="${not empty nameError}">${nameError}</c:if></td>								
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>E-mail:</span></td>
-                                                    <td><input type="text" name="email"><c:if test="${not empty emailError}">${emailError}</c:if></td>								
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Contact Number:</span></td>
-                                                    <td><input type="text" name="phone"><c:if test="${not empty phoneError}">${phoneError}</c:if></td>
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Address:</span></td>
-                                                    <td><input type="text" name="addr"><c:if test="${not empty addressError}">${addressError}</c:if></td>
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Paypal Account:</span></td>
-                                                    <td><input type="text" name="paypal"></td>
-                                                </tr><tr  id="input_signup">
-                                                    <td><span>Location:</span></td>
-                                                    <td>
-                                                        <select name="location">
-                                                            <option value="Ambon">Ambon</option>
-                                                            <option value="Ambon">Ambon</option>
-                                                            <option value="Ambon">Ambon</option>
-                                                            <option value="Ambon">Ambon</option>
-                                                            <option value="Ambon">Ambon</option>
-                                                            <option value="Ambon">Ambon</option>
-                                                        </select>
-                                                    </td>	
-                                                </tr>
-                                            </table>
-                                            <p class="letter_spacing">Username, Fullname, and IDNumber cannot be changed. Make sure to check before submitting.</p>
-                                           <input type="submit" class="button1" value="Daftar" name="Daftar">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                                            </tr><tr  id="input_signup">
+                                            <td><span>Password:</span></td>
+                                            <td><input type="text" class="input"name="pwd"><c:if test="${not empty passwordError}">${passwordError}</c:if></td>								
+                                    </tr><tr  id="input_signup">
+                                    <td><span>Repeat Password:</span></td>
+                                    <td><input type="text" class="input"name="pwd2"></td>								
+                                </tr><tr  id="input_signup">
+                                    <td><span>Fullname:</span></td>
+                                    <td><input type="text" class="input"name="name"><c:if test="${not empty nameError}">${nameError}</c:if></td>								
+                            </tr><tr  id="input_signup">
+                            <td><span>E-mail:</span></td>
+                            <td><input type="text" class="input"name="email"><c:if test="${not empty emailError}">${emailError}</c:if></td>								
+                    </tr><tr  id="input_signup">
+                    <td><span>Contact Number:</span></td>
+                    <td><input type="text" class="input"name="phone"><c:if test="${not empty phoneError}">${phoneError}</c:if></td>
+            </tr><tr  id="input_signup">
+            <td><span>Address:</span></td>
+            <td><input type="text" class="input"name="addr"><c:if test="${not empty addressError}">${addressError}</c:if></td>
+    </tr><tr  id="input_signup">
+    <td><span>Paypal Account:</span></td>
+    <td><input type="text" class="input" name="paypal"></td>
+</tr><tr  id="input_signup">
+    <td><span>Location:</span></td>
+    <td>
+        <select name="location">
+            <option value="Ambon">Ambon</option>
+            <option value="Ambon">Ambon</option>
+            <option value="Ambon">Ambon</option>
+            <option value="Ambon">Ambon</option>
+            <option value="Ambon">Ambon</option>
+            <option value="Ambon">Ambon</option>
+        </select>
+    </td>	
+</tr>
+</table>
+<p class="letter_spacing">Username, Fullname, and IDNumber cannot be changed. Make sure to check before submitting.</p>
+<input type="submit" class="button1" value="Daftar" name="Daftar">
+</div>
+</form>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="body3">
+    <div class="body4">
+        <div class="main">
+            <!-- footer -->
+            <footer>
+                <div class="wrapper">
+                    <section class="col1 pad_left1">
+                        <h3>Final Project of <span>Group 8</span> <br>for <span>Web Service and Application</span> course</h3>
+                        <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank">Website Template</a> by TemplateMonster.com
+                    </section>
+                    <section class="col2 pad_left1">
+                        <h3>Follow Us </h3>
+                        <ul id="icons">
+                            <li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.gif" alt=""></a></li>
+                            <li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon2.gif" alt=""></a></li>
+                            <li><a href="#" class="normaltip" title="Twitter"><img src="images/icon3.gif" alt=""></a></li>
+                            <li><a href="#" class="normaltip" title="Delicious"><img src="images/icon4.gif" alt=""></a></li>
+                            <li><a href="#" class="normaltip" title="Technorati"><img src="images/icon5.gif" alt=""></a></li>
+                        </ul>
+                    </section>
                 </div>
-            </div>
+                <!-- {%FOOTER_LINK} -->
+            </footer>
+            <!-- / footer -->
         </div>
-        <div class="body3">
-            <div class="body4">
-                <div class="main">
-                    <!-- footer -->
-                    <footer>
-                        <div class="wrapper">
-                            <section class="col1 pad_left1">
-                                <h3>Final Project of <span>Group 8</span> <br>for <span>Web Service and Application</span> course</h3>
-                                <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank">Website Template</a> by TemplateMonster.com
-                            </section>
-                            <section class="col2 pad_left1">
-                                <h3>Follow Us </h3>
-                                <ul id="icons">
-                                    <li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.gif" alt=""></a></li>
-                                    <li><a href="#" class="normaltip" title="Linkedin"><img src="images/icon2.gif" alt=""></a></li>
-                                    <li><a href="#" class="normaltip" title="Twitter"><img src="images/icon3.gif" alt=""></a></li>
-                                    <li><a href="#" class="normaltip" title="Delicious"><img src="images/icon4.gif" alt=""></a></li>
-                                    <li><a href="#" class="normaltip" title="Technorati"><img src="images/icon5.gif" alt=""></a></li>
-                                </ul>
-                            </section>
-                        </div>
-                        <!-- {%FOOTER_LINK} -->
-                    </footer>
-                    <!-- / footer -->
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript"> Cufon.now();</script>
-    </body>
+    </div>
+</div>
+<script type="text/javascript"> Cufon.now();</script>
+</body>
 </html>
