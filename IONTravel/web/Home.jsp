@@ -103,8 +103,8 @@
 								<div>
 									<h2>Searching <span>for...</span></h2>
 									<p class="pad_bot1">a beautiful place to be visited during holiday? Just type here.</p>
-                                                                        <form action="Search" method="post">
-										<input type="text" name="search">
+                                                                        <form action="Search_Result.jsp" method="get">
+										<input type="text" name="key">
 									<br>
 									<input type="submit" class="button1" value="Search">
                                                                         </form>

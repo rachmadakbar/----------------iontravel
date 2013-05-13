@@ -1,4 +1,5 @@
 
+<%@page import="model.TempatWisataModel"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="helper.TemporaryObject"%>
 <%@page import="helper.TemporaryObject"%>
@@ -63,12 +64,14 @@
 			<div class="wrapper">
 				<h2 id="titlesearch">Search <span>Result</span></h2>
 				<div id="keybox">
-					<h3>Keyword: <span id="keyword"><%=session.getAttribute("key").toString() %></span><br></h3>
+					<h3>Keyword: <span id="keyword"><%=request.getParameter("key") %></span><br></h3>
 				</div>
 				<div id="allres"> 
 				<!-- Iterasi ini buat tiap result-->
 					<%
-                                            ArrayList<TemporaryObject> list = (ArrayList<TemporaryObject>) session.getAttribute("tempatWisata");
+                                            String key = request.getParameter("key");
+                                            TempatWisataModel t = new TempatWisataModel();
+                                            ArrayList<TemporaryObject> list = t.getTempatWisataByKey(key);
                                             String urlimage="images/page4_img3.jpg";
                                             String lokasi="tes";
 						for (int i = 0; i < list.size(); i++) {
