@@ -147,8 +147,8 @@ public class Register extends HttpServlet {
 
             if (data[1] != 0) {
                 if (data[1] == 1) {
-                    request.setAttribute("passwordError", "Mohon mengisi username Anda!");
-                } else if (data[1] == 1) {
+                    request.setAttribute("passwordError", "Mohon mengisi password Anda!");
+                } else if (data[1] == 2) {
                     request.setAttribute("passwordError", "Password Anda harus harus lebih dari 5 karakter!");
                 } else {
                     request.setAttribute("passwordError", "Password tidak cocok!");
@@ -165,7 +165,7 @@ public class Register extends HttpServlet {
                 if (data[3] == 1) {
                     request.setAttribute("emailError", "Mohon isi e-mail Anda!");
                 } else {
-                    request.setAttribute("emailError", "E-mail Anda tidak sah!");
+                    request.setAttribute("emailError", "Format alamat e-mail Anda tidak sah!");
                 }
             }
             if (data[4] != 0) {
@@ -180,7 +180,7 @@ public class Register extends HttpServlet {
                 if (data[5] == 1) {
                     request.setAttribute("phoneError", "Mohon isi nomor telepon Anda!");
                 } else {
-                    request.setAttribute("phoneError", "Nomor telepon Anda hanya bisa terdiri dari kombinasi angka~");
+                    request.setAttribute("phoneError", "Nomor telepon Anda hanya bisa terdiri dari kombinasi angka");
                 }
             }
             if (data[0] + data[1] + data[2] + data[3] + data[4] + data[5] == 0) {

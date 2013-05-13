@@ -136,31 +136,39 @@ public class EditProfile extends HttpServlet {
         data[4] = this.checkTelp();
             if (data[0] == 1) {
                 this.password = userDetails.get(1);
-            } else if (data[0] == 2 && data[0] == 3) {
+            } else if (data[1] == 2) {
                 allIsWell = false;
-            }
+                    request.setAttribute("passwordError", "Password Anda harus harus lebih dari 5 karakter!");
+                } else if (data[1] == 3) {
+                    allIsWell = false;
+                    request.setAttribute("passwordError", "Password tidak cocok!");
+                } 
             if (data[3] == 1) {
                 this.alamat = userDetails.get(3);
             } else if (data[3] == 2) {
                 allIsWell = false;
+                request.setAttribute("addressError", "Alamat Anda hanya bisa terdiri dari kombinasi huruf, angka dan tanda (. , / : -)");
             }
             
             if (data[1] == 1) {
                 this.nama = userDetails.get(2);
             } else if (data[1] == 2) {
                 allIsWell = false;
+                request.setAttribute("nameError", "Nama Anda hanya bisa terdiri dari kombinasi huruf dan spasi");
             }
             
             if (data[2] == 1) {
                 this.email = userDetails.get(4);
             } else if (data[2] == 2) {
                 allIsWell = false;
+                request.setAttribute("emailError", "Format alamat e-mail Anda tidak sah!");
             }
 
             if (data[4] == 1) {
                 this.telp = userDetails.get(5);
             } else if (data[4] == 2) {
                 allIsWell = false;
+                request.setAttribute("phoneError", "Nomor telepon Anda hanya bisa terdiri dari kombinasi angka~");
             }
             if (allIsWell) {
                 user.updateCustomer(username, password, nama, alamat, email, telp);
@@ -171,7 +179,7 @@ public class EditProfile extends HttpServlet {
         } else {
             request.setAttribute("update", "Mohon isi password Anda!");
         }
-
+request.getRequestDispatcher("/Edit_User_Profile.jsp").forward(request, response);
 
 
 //        response.setContentType("text/html;charset=UTF-8");
