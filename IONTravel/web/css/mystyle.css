@@ -1,7 +1,7 @@
 /* home */
 
 #noaccount {
-margin-top:45px; margin-bottom:-25px; height:88px; 
+margin-top:35px; margin-bottom:-25px; height:88px; 
 }
 
 #signup {
@@ -14,6 +14,8 @@ float: right;
 margin-top:20px;
 padding: 3px 20px
 }
+
+#home_box { height:330px }
 
 /* register */
 

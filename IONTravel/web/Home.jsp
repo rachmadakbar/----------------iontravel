@@ -100,7 +100,7 @@
 					<div class="wrap">
 						<section class="cols">
 							<div class="box">
-								<div>
+								<div id="home_box">
 									<h2>Pencarian</h2>
 									<p class="pad_bot1">Ingin mencari informasi atau paket terkait dengan tempat wisata yang ingin dikunjungi? Cukup ketik nama tempat wisata yang dicari, dan pilih Cari. </p>
                                                                         <form action="Search_Result.jsp" method="get">
@@ -113,7 +113,7 @@
 						</section>
 						<section class="cols pad_left1">
 							<div class="box">
-								<div>
+								<div id="home_box">
 									<h2>Tentang <span>Kami</span></h2>
 									<figure><img src="images/page1_img2.jpg" alt="" ></figure>
 									<p class="pad_bot1"><span>ION Travel</span> akan membawa Anda menuju daerah mana pun di Indonesia! <span>Plan it, Enjoy it!<span></p>
@@ -123,8 +123,8 @@
 							</div>
 						</section>
 						<section class="cols pad_left1">
-							<div class="box">
-								<div>
+							<div class="box" >
+								<div id="home_box">
 									<h2>Log<span>in</span></h2>
 									<div style="margin-bottom: 10px; height:150px"><ul>
 										<form action="#" name="login">		
