@@ -1,22 +1,41 @@
 /* home */
 
-#noaccount {
-margin-top:35px; margin-bottom:-25px; height:88px; 
+#home_button {
+	font:20px Georgia, "Times New Roman", Times, serif;
+	float: right;
+	padding: 3px 20px;
+	margin-right:-15px;
 }
+#home_box { height:210px }
+#home_box_content { height:120px }
 
-#signup {
-margin-top:-10px; float: right; color:#fff
-}
+.top_nav { font-size:15pt; letter-spacing:-1px}
+#top_nav .active a { text-decoration:none;background:url(../images/menu_bg.png) repeat; padding: 6px 15px;}
 
-#search_button {
-font:20px Georgia, "Times New Roman", Times, serif;
-float: right;
-margin-top:20px;
-padding: 3px 20px
-}
+#pack_title { margin-left:60px;}
+#pack_title h2 {font-size: 50pt; color: #a80002 }
 
-#home_box { height:330px }
-
+#pack_box { width: 870px; margin: 0 auto;}
+#pack {
+	display:inline-block;
+	background:url(../images/bg_slider.jpg) repeat;
+	background-position: top center;
+	width: 400px;
+	margin: 15px;
+	box-shadow:0 5px 10px rgba(0, 0, 0, .4);
+	-moz-box-shadow:0 5px 10px rgba(0, 0, 0, .4);
+	-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, .4);
+ }
+#pack h3 { color:#a80002; padding: 3px 10px; margin: 2px auto; font-size:25pt }
+#pack img{ }
+#pack article { 
+	padding: 3px 10px; 
+	letter-spacing:-1px; font-size:15pt;
+	color: #055702 }
+#pack a { float:right; margin:15px; background:#055702}
+#pack a:hover { background:#fff; color:#055702}
+#pack span { } 
+ 
 /* register */
 
 #input_signup {

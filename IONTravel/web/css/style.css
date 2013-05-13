@@ -10,14 +10,14 @@ mark, rp, rt, ruby, summary, time {display:inline}
 body {background:url(../images/bg_bot.jpg) center 0 repeat #faf3ed;border:0;font:14px Georgia, "Times New Roman", Times, serif;color:#200;line-height:24px}
 .ic, .ic a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .css3{border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 4px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 4px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, .4);position:relative}
-/* Global Structure */
-.main {	margin:0 auto;	width:960px}
+/* Global Structure */ 
+.main {	margin:0 auto;	width:960px} 
 .body1 {background:url(../images/bg_top_img.jpg) top center no-repeat}
 .body2 {background:#faf3ed} 
 .body3 {background:url(../images/bg_bot.jpg) top center repeat}
-.body4 {background:url(../images/bg_bot_img.jpg) top center no-repeat}
+.body4 {background:url(../images/bg_bot_img.jpg) top center no-repeat} 
 .body5 {background:url(../images/slider_shadow.png) center 508px no-repeat}
-.body6 {background:url(../images/bg_top.jpg) top repeat-x}
+.body6 {background:url(../images/bg_top.jpg) top repeat-x} 
 /* main layout */
 a {color:#a80002;text-decoration:none;outline:none}
 a:hover {text-decoration:underline}
@@ -31,12 +31,12 @@ p {padding-bottom:24px}
 header {height:121px;padding-top:31px;width:100%;overflow:hidden}
 #logo {display:block;background:url(../images/logo.png) 0 0 no-repeat;width:259px;height:94px;text-indent:-9999px}
 #top_nav {float:right;padding:4px 43px 30px 0}
-#top_nav li {float:left;padding:3px 26px 5px 0;background:url(../images/top_line.gif) right 0 no-repeat;margin-right:25px}
+#top_nav li {float:left;padding:3px 26px 5px 0;margin-right:25px;}
 #top_nav li a {display:block;line-height:0}
-#top_nav .end {background:none;padding-right:0;margin-right:0}
+#top_nav #end {background:none;padding-right:0;margin-right:0}
 #menu {width:633px;float:right;padding:0 0 0 0}
-#menu li {float:left;padding-left:3px}
-#menu li a {display:block;font-size:24px;color:#faf3ed;line-height:40px;padding:0 20px;height:44px;letter-spacing:-1px}
+#menu li {float:right;padding-left:3px}
+#menu li a {display:block;font-size:27px;color:#faf3ed;line-height:40px;padding:0 20px;height:44px;letter-spacing:-1px}
 #menu li a:hover, #menu .active a {text-decoration:none;background:url(../images/menu_bg.png) repeat}
 .slider_bg {width:100%;height:404px;background:url(../images/bg_slider.jpg) 0 0 no-repeat;position:relative;overflow:hidden;box-shadow:0 0 5px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, .4);margin-bottom:35px}
 .slider {top:10px;right:10px;position:absolute;z-index:1;width:920px}

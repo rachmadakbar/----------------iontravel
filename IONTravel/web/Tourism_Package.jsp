@@ -40,7 +40,7 @@
 				</nav>
 				<nav>
 					<ul id="menu">
-						<li><a href="index.jsp">Home</a></li>
+						<li><a href="index.jsp">Rumah</a></li>
 						<li><a href="Cuisine.html">Cuisine</a></li>
 						<li><a href="Wine.html">Wine List</a></li>
 						<li class="active"><a href="CookBook.html">CookBook</a></li>

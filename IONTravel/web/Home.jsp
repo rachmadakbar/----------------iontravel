@@ -37,21 +37,20 @@
 			<div class="main">
 <!-- header -->
 				<header>
-					<h1><a href="index.html" id="logo">Deliccio Classic European Cuisine</a></h1>
+					<h1><a href="index.html" id="logo">ION Travel</a></h1>
 					<nav>
 						<ul id="top_nav">
-							<li><a href="index.html"><img src="images/icon_1.gif" alt=""></a></li>
-							<li><a href="#"><img src="images/icon_2.gif" alt=""></a></li>
-							<li class="end"><a href="Contacts.html"><img src="images/icon_3.gif" alt=""></a></li>
+							<li class="active"><a href="Home.jsp"><img src="images/icon_1.gif" alt=""></a></li>
+							<li><a href="About.jsp"><img src="images/icon_2.gif" alt=""></a></li>
+							<li id="end"><a href="Contact_Us.jsp"><img src="images/icon_3.gif" alt=""></a></li>
 						</ul>
 					</nav>
 					<nav>
 						<ul id="menu">
-							<li class="active"><a href="home.jsp">Home</a></li>
-							<li><a href="Cuisine.html">Cuisine</a></li>
-							<li><a href="Wine.html">Wine List</a></li>
-							<li><a href="CookBook.html">CookBook</a></li>
-							<li><a href="Contacts.html">Contacts</a></li>
+							<li><a href="Hotel.jsp">Hotel</a></li>
+							<li><a href="Transportation.jsp">Transportasi</a></li>
+							<li><a href="Town.jsp">Kota</a></li>
+							<li><a href="Promo.jsp">Promo</a></li>
 						</ul>
 					</nav>
 				</header><div class="ic">More Website Templates  @ TemplateMonster.com - August 1st 2011!</div>
@@ -101,24 +100,25 @@
 						<section class="cols">
 							<div class="box">
 								<div id="home_box">
-									<h2>Pencarian</h2>
-									<p class="pad_bot1">Ingin mencari informasi atau paket terkait dengan tempat wisata yang ingin dikunjungi? Cukup ketik nama tempat wisata yang dicari, dan pilih Cari. </p>
-                                                                        <form action="Search_Result.jsp" method="get">
-										<input type="text" name="key">
-									<br>
-									<input type="submit" class="button1" id="search_button" value="Cari">
-                                                                        </form>
+									<h2>Pencarian <span>Kota</span></h2>
+									<form action="Search_Result.jsp" method="get">
+										<div id="home_box_content">
+											<p class="pad_bot1">Mencari paket menuju kota tertentu? Masukkan nama kota yang ingin Anda kunjungi.</p>
+											<input type="text" name="key">
+										</div>
+										<input type="submit" class="button1" id="home_button" value="Cari">
+									</form>
 								</div>
 							</div>
 						</section>
 						<section class="cols pad_left1">
 							<div class="box">
 								<div id="home_box">
-									<h2>Tentang <span>Kami</span></h2>
-									<figure><img src="images/page1_img2.jpg" alt="" ></figure>
-									<p class="pad_bot1"><span>ION Travel</span> akan membawa Anda menuju daerah mana pun di Indonesia! <span>Plan it, Enjoy it!<span></p>
-									</br>
-									<a href="#" class="button1">Tentang Kami</a>
+									<h2>Registrasi</h2>
+									<div id="home_box_content">
+										<p class="pad_bot1">Belum terdaftar sebagai customer? Mendaftarlah sebagai customer untuk mengakses promo-promo istimewa ION Travel!</p>
+									</div>
+									<a href="#" class="button1" id="home_button" onClick="document.getElementById('######').submit()">Daftar</a>
 								</div>
 							</div>
 						</section>
@@ -126,19 +126,17 @@
 							<div class="box" >
 								<div id="home_box">
 									<h2>Log<span>in</span></h2>
-									<div style="margin-bottom: 10px; height:150px"><ul>
-										<form action="#" name="login">		
-											<li><label>Username</label></li>
-											<li><input type="text" name="username"></li>
-											<li><label>Password</label></li>
-											<li><input type="password" name="password"></li>
-											<li style="float:right"><br><a href="#" class="button1" onClick="document.getElementById('######').submit()">Login</a></li>
-										</form>
-									</ul></div>
-									<div id="noaccount">
-										<span>Belum terdaftar sebagai pelanggan?</span>
-										<h3 id="signup"><a href="Register.jsp" onClick="document.getElementById('######').submit()">Registrasi</a></h3>
-									</div>
+									<form action="#" name="login">
+										<div id="home_box_content">
+											<ul>		
+												<li><label>Username</label></li>
+												<li><input type="text" name="username"></li>
+												<li><label>Password</label></li>
+												<li><input type="password" name="password"></li>
+											</ul>
+										</div>
+										<a href="#" class="button1" id="home_button" onClick="document.getElementById('######').submit()">Login</a>
+									</form>	
 								</div>
 							</div>
 						</section>
@@ -146,6 +144,62 @@
 				</article>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="body2">
+	<div class="main">
+		<article id="content2">
+			<section class="wrapper" id="bg">
+				<div class="wrapper">
+					<div id="pack_title">
+						<h2>PROMO PAKET</h2>
+					</div>
+					
+					<div id="pack_box">
+							<div id="pack">
+								<img src="images/pack1.jpg" />
+								<h3>Depok - Jaya Wijaya</h3>
+								<article>
+								6 - 7 April 2013 </br>
+								Bus, 01.00 - 22.00 WIB 
+								</article>
+								<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
+							</div>
+							<div id="pack">
+								<img src="images/pack1.jpg" />
+								<h3>Depok - Jaya Wijaya</h3>
+								<article>
+								6 - 7 April 2013 </br>
+								Bus, 01.00 - 22.00 WIB 
+								</article>
+								<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
+							</div>							
+							<div id="pack">
+								<img src="images/pack1.jpg" />
+								<h3>Depok - Jaya Wijaya</h3>
+								<article>
+								6 - 7 April 2013 </br>
+								Bus, 01.00 - 22.00 WIB 
+								</article>
+								<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
+							</div>							
+							<div id="pack">
+								<img src="images/pack1.jpg" />
+								<h3>Depok - Jaya Wijaya</h3>
+								<article>
+								6 - 7 April 2013 </br>
+								Bus, 01.00 - 22.00 WIB 
+								</article>
+								<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
+							</div>
+					</div>
+				</div>
+				<div class="wrapper">
+					<a href="#" class="button1" style="float:right; margin-top:15px" onClick="document.getElementById('######').submit()">More...</a>
+				</div>
+			</section>
+		</article>
+<!-- / content -->
 	</div>
 </div>
 <div class="body3">
