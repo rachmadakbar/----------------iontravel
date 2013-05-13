@@ -5,10 +5,8 @@
 package model;
 
 import helper.DBConnector;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import helper.TemporaryObject;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,27 +14,20 @@ import java.util.logging.Logger;
  */
 public class UserModel {
     String query;
-    ResultSet resultset;
     DBConnector db;
     
-    public ResultSet getUser(String username, String password){
+    public ArrayList<TemporaryObject> getUser(String username, String password){
         query = "select * from user where username ='"+username+"' and "
                 + "password = '"+password+"'";
         return db.selectQuery(query);
     }
     
-        public boolean isAlreadyExist(String username){
+    public boolean isAlreadyExist(String username){
         query = "select count(*) as c from user where username ='"+username+"'";
-        boolean status = false;
-        try {
-            status = (db.selectQuery(query).getInt("c")) == 1;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return status;
+        return db.selectQuery(query).size()!=0;
     }
     
-    public ResultSet getAllCustomer(){
+    public ArrayList<TemporaryObject> getAllCustomer(){
         query = "select * from user where peran = 'customer'";
         return db.selectQuery(query);
     }

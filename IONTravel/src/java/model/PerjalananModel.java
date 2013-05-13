@@ -5,7 +5,8 @@
 package model;
 
 import helper.DBConnector;
-import java.sql.ResultSet;
+import helper.TemporaryObject;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,15 +14,14 @@ import java.sql.ResultSet;
  */
 public class PerjalananModel {
     String query;
-    ResultSet resultset;
     DBConnector db;
     
-    public ResultSet getAllPerjalanan(){
+    public ArrayList<TemporaryObject> getAllPerjalanan(){
         query = "select * from perjalanan";
         return db.selectQuery(query);
     }
     
-    public ResultSet getPerjalanan(String dariKota, String dariProv, 
+    public ArrayList<TemporaryObject> getPerjalanan(String dariKota, String dariProv, 
             String keKota, String keProv){
         query = "select * from perjalanan where darikota='"+dariKota+"' and "
                 + "dariProvinsi ='"+dariProv+"' and kekota = '"+keKota+"' and "

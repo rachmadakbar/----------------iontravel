@@ -5,7 +5,8 @@
 package model;
 
 import helper.DBConnector;
-import java.sql.ResultSet;
+import helper.TemporaryObject;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,20 +14,19 @@ import java.sql.ResultSet;
  */
 public class TransportasiModel {
     String query;
-    ResultSet resultset;
     DBConnector db;
     
-    public ResultSet getTransport(String namamaskapai){
+    public ArrayList<TemporaryObject> getTransport(String namamaskapai){
         query = "select * from transport where namamaskapai ='"+namamaskapai+"'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllActiveTransport(){
+    public ArrayList<TemporaryObject> getAllActiveTransport(){
         query = "select * from transport where status = '1'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllTransport(){
+    public ArrayList<TemporaryObject> getAllTransport(){
         query = "select * from transport";
         return db.selectQuery(query);
     }

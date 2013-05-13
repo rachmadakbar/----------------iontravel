@@ -5,7 +5,8 @@
 package model;
 
 import helper.DBConnector;
-import java.sql.ResultSet;
+import helper.TemporaryObject;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,30 +14,29 @@ import java.sql.ResultSet;
  */
 public class TempatWisataModel {
     String query;
-    ResultSet resultset;
     DBConnector db;
     
-    public ResultSet getAllActiveTempatWisata(){
+    public ArrayList<TemporaryObject> getAllActiveTempatWisata(){
         query = "select * from tempat_wisata where status = '1'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllActiveTempatWisataByKotaProvinsi(String kota, String provinsi){
+    public ArrayList<TemporaryObject> getAllActiveTempatWisataByKotaProvinsi(String kota, String provinsi){
         query = "select * from tempat_wisata where status = '1' and kota='"+kota+"' and provinsi='"+provinsi+"'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllTempatWisata(){
+    public ArrayList<TemporaryObject> getAllTempatWisata(){
         query = "select * from tempat_wisata";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllTempatWisataByKotaProvinsi(String kota, String provinsi){
+    public ArrayList<TemporaryObject> getAllTempatWisataByKotaProvinsi(String kota, String provinsi){
         query = "select * from tempat_wisata where kota='"+kota+"' and provinsi='"+provinsi+"'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getTempatWisata(String id){
+    public ArrayList<TemporaryObject> getTempatWisata(String id){
         query = "select * from tempat_wisata where id='"+id+"'";
         return db.selectQuery(query);
     }

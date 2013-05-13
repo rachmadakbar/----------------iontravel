@@ -5,7 +5,8 @@
 package model;
 
 import helper.DBConnector;
-import java.sql.ResultSet;
+import helper.TemporaryObject;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,15 +14,14 @@ import java.sql.ResultSet;
  */
 public class ProvinsiModel {
     String query;
-    ResultSet resultset;
     DBConnector db;
     
-    public ResultSet getAllActiveProvinsi(){
+    public ArrayList<TemporaryObject> getAllActiveProvinsi(){
         query = "select distinct provinsi from kota where status = '1'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllProvinsi(){
+    public ArrayList<TemporaryObject> getAllProvinsi(){
         query = "select distinct provinsi from kota";
         return db.selectQuery(query);
     }

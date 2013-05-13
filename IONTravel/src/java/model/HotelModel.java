@@ -5,7 +5,9 @@
 package model;
 
 import helper.DBConnector;
-import java.sql.ResultSet;
+import helper.TemporaryObject;
+import java.util.ArrayList;
+
 
 /**
  *
@@ -13,30 +15,29 @@ import java.sql.ResultSet;
  */
 public class HotelModel {
     String query;
-    ResultSet resultset;
     DBConnector db;
     
-    public ResultSet getActiveHotelByKotaProvinsi(String kota, String provinsi){
+    public ArrayList<TemporaryObject> getActiveHotelByKotaProvinsi(String kota, String provinsi){
         query = "select * from hotel where status = '1' and nama='"+kota+"' and provinsi='"+provinsi+"'";
         return db.selectQuery(query);
     }
      
-    public ResultSet getActiveHotel(){
+    public ArrayList<TemporaryObject> getActiveHotel(){
         query = "select * from hotel where status = '1'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllHotel(){
+    public ArrayList<TemporaryObject> getAllHotel(){
         query = "select * from hotel";
         return db.selectQuery(query);
     }
     
-    public ResultSet getAllHotelByKotProvinsi(String kota, String provinsi){
+    public ArrayList<TemporaryObject> getAllHotelByKotProvinsi(String kota, String provinsi){
         query = "select * from hotel and nama='"+kota+"' and provinsi='"+provinsi+"'";
         return db.selectQuery(query);
     }
     
-    public ResultSet getHotel(String id){
+    public ArrayList<TemporaryObject> getHotel(String id){
         query = "select * from hotel where id='"+id+"'";
         return db.selectQuery(query);
     }
