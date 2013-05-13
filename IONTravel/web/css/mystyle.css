@@ -8,6 +8,13 @@ margin-top:45px; margin-bottom:-25px; height:88px;
 margin-top:-10px; float: right; color:#fff
 }
 
+#search_button {
+font:20px Georgia, "Times New Roman", Times, serif;
+float: right;
+margin-top:20px;
+padding: 3px 20px
+}
+
 /* register */
 
 #input_signup {

@@ -60,7 +60,7 @@ header {height:121px;padding-top:31px;width:100%;overflow:hidden}
 .pad_bot2 {padding-bottom:24px}
 .marg_right1 {margin-right:20px}
 .box {background:url(../images/box_bg.png) repeat;color:#faf3ed;box-shadow:0 0 5px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, .4)}
-.box > div {background:url(../images/box_top.png) 0 top no-repeat;padding:30px;padding-top:0;overflow:hidden}
+.box > div {background:url(../images/box_top.png) 0 top no-repeat;padding:30px;padding-top:0;overflow:hidden; height:350px}
 .box h2 {color:#a80002;padding:15px 0 12px 0}
 .box h2 span {color:#faf3ed}
 .box figure {padding-bottom:13px}

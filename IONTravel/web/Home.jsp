@@ -101,12 +101,12 @@
 						<section class="cols">
 							<div class="box">
 								<div>
-									<h2>Searching <span>for...</span></h2>
-									<p class="pad_bot1">a beautiful place to be visited during holiday? Just type here.</p>
+									<h2>Pencarian</h2>
+									<p class="pad_bot1">Ingin mencari informasi atau paket terkait dengan tempat wisata yang ingin dikunjungi? Cukup ketik nama tempat wisata yang dicari, dan pilih Cari. </p>
                                                                         <form action="Search_Result.jsp" method="get">
 										<input type="text" name="key">
 									<br>
-									<input type="submit" class="button1" value="Search">
+									<input type="submit" class="button1" id="search_button" value="Cari">
                                                                         </form>
 								</div>
 							</div>
@@ -114,11 +114,11 @@
 						<section class="cols pad_left1">
 							<div class="box">
 								<div>
-									<h2>About <span>Us</span></h2>
+									<h2>Tentang <span>Kami</span></h2>
 									<figure><img src="images/page1_img2.jpg" alt="" ></figure>
-									<p class="pad_bot1"><span>ION Travel</span> will take you anywhere you want in Indonesia! You just need to <span>Plan it<span>, and <span>Enjoy it!<span></p>
+									<p class="pad_bot1"><span>ION Travel</span> akan membawa Anda menuju daerah mana pun di Indonesia! <span>Plan it, Enjoy it!<span></p>
 									</br>
-									<a href="#" class="button1">Read More</a>
+									<a href="#" class="button1">Tentang Kami</a>
 								</div>
 							</div>
 						</section>
@@ -131,13 +131,13 @@
 											<li><label>Username</label></li>
 											<li><input type="text" name="username"></li>
 											<li><label>Password</label></li>
-											<li><input type="text" name="password"></li>
+											<li><input type="password" name="password"></li>
 											<li style="float:right"><br><a href="#" class="button1" onClick="document.getElementById('######').submit()">Login</a></li>
 										</form>
 									</ul></div>
 									<div id="noaccount">
-										<span>Not a customer yet?</span>
-										<h3 id="signup"><a href="Register.jsp" onClick="document.getElementById('######').submit()">Sign Up Now</a></h3>
+										<span>Belum terdaftar sebagai pelanggan?</span>
+										<h3 id="signup"><a href="Register.jsp" onClick="document.getElementById('######').submit()">Registrasi</a></h3>
 									</div>
 								</div>
 							</div>
