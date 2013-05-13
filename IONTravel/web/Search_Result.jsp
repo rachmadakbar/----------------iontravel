@@ -73,7 +73,7 @@
                                             String lokasi="tes";
 						for (int i = 0; i < list.size(); i++) {
 						out.print("<div id=\"resultbox\">");
-						out.print("	<a href=\"#\" class=\"resultbox\">");
+						out.print("	<a href=\"Tourism_Site_Profile.jsp?id="+list.get(i).get(0)+"\" class=\"resultbox\">");
 						out.print("		<figure class=\"left marg_right1\"><img src=\""+urlimage+"\" alt=\"\"></figure>");
 						out.print("		<div id=\"resultplace\">"+list.get(i).get(1)+"</div>");
 						out.print("		<div id=\"resultlocation\">"+lokasi+"</div>");

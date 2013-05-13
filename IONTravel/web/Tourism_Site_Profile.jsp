@@ -1,3 +1,6 @@
+<%@page import="model.TempatWisataModel"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="helper.TemporaryObject"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,23 +62,30 @@
 				<div class="wrap">
 					<div class="box">
 						<div>
-							<h2 name="name" class="letter_spacing">Londa</h2>
-							<img src="images/londa.jpg" alt="" id="descimage">
-							<table id="descontent">
-								<tr>
-									<td id="desclabel"><span>Location:</span></td>
-								</tr><tr>
-									<td id="desc">Tana Toraja, South Celebes</td>								
-								</tr><tr  id="description">
-									<td  id="desclabel">Description:</td>							
-								</tr>	
-								<tr>
-									<td  id="desc"><span>A mass tombs inside stone cave. <br>
-									Skull and bones here and there. <br>
-									Death here, there, and everywhere.</span></td>
-								</tr><tr>
+                                                    <%String id = request.getParameter("id");
+                                                        TempatWisataModel t = new TempatWisataModel();
+                                                        ArrayList<TemporaryObject> list = t.getTempatWisata(id);
+                                                    
+							out.print("<h2 name='name' class='letter_spacing'>"+list.get(0).get(1)+"</h2>");
+							out.print("<img src='images/londa.jpg' id='descimage'>");
+							out.print("<table id='descontent'>"+
+								"<tr>"+
+									"<td id='desclabel'><span>Location:</span></td>"+
+								"</tr>"+
+                                                                "<tr>"+
+									"<td id='desc'>"+list.get(0).get(2)+", "+list.get(0).get(3)+"</td>"+								
+								"</tr>"+
+                                                                 "<tr  id='description'>"+
+									"<td  id='desclabel'>Description:</td>"+							
+								"</tr>"+
+								"<tr>"+
+									"<td  id='desc'><span>"+list.get(0).get(5)+"</span></td>"+
+								"</tr>");
+                                                        %>
+                                                                <tr>
 									<td id="desclabel"><span>Rating:</span></td>
-								</tr><tr>
+								</tr>
+                                                                <tr>
 									<td id="desc">
 										<form action="home.jsp">
 											<input class="star required" type="radio" name="star1" value="1"/>

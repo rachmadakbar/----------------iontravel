@@ -56,7 +56,7 @@ public class DBConnector {
             column = data.getColumnCount();
             while(resultSet.next()){
                 temp = new TemporaryObject();
-                for(int i=1; i<column; i++){
+                for(int i=1; i<=column; i++){
                     temp.add(resultSet.getString(i));
                 }
                 list.add(temp);
