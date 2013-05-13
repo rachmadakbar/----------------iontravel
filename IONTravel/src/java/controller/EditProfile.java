@@ -172,6 +172,7 @@ public class EditProfile extends HttpServlet {
             }
             if (allIsWell) {
                 user.updateCustomer(username, password, nama, alamat, email, telp);
+
                 request.setAttribute("update", "Update data berhasil!!");
             } else {
                 request.setAttribute("update", "Format data salah!");

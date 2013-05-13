@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.UserModel;
 
 /**
@@ -185,6 +186,9 @@ public class Register extends HttpServlet {
             }
             if (data[0] + data[1] + data[2] + data[3] + data[4] + data[5] == 0) {
                 request.setAttribute("registration", "Registrasi Berhasil!");
+                HttpSession signIn = request.getSession(true);
+                signIn.setAttribute("username", username);
+                signIn.setAttribute("role", "customer");
                 request.getRequestDispatcher("/Home.jsp").forward(request, response);
             }
             request.getRequestDispatcher("/Register.jsp").forward(request, response);
