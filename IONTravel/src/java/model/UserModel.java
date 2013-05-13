@@ -27,6 +27,11 @@ public class UserModel {
         return db.selectQuery(query).size()!=0;
     }
     
+    public boolean isAlreadyExist(String username, String password){
+        query = "select count(*) as c from user where username ='"+username+"' and password='"+password+"'";
+        return db.selectQuery(query).size()!=0;
+    }
+    
     public ArrayList<TemporaryObject> getAllCustomer(){
         query = "select * from user where peran = 'customer'";
         return db.selectQuery(query);
