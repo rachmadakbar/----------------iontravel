@@ -1,4 +1,7 @@
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="helper.TemporaryObject"%>
+<%@page import="helper.TemporaryObject"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,28 +63,24 @@
 			<div class="wrapper">
 				<h2 id="titlesearch">Search <span>Result</span></h2>
 				<div id="keybox">
-					<h3>Keyword: <span id="keyword">Londa</span><br></h3>
+					<h3>Keyword: <span id="keyword"><%=session.getAttribute("key").toString() %></span><br></h3>
 				</div>
 				<div id="allres"> 
-						<div id="resultbox">
-							<a href="#" class="resultbox">
-								<figure class="left marg_right1"><img src="images/page4_img3.jpg" alt=""></figure>
-								<div id="resultplace">Londa</div>
-								<div id="resultlocation">Tana Toraja</div>
-							</a>
-						</div>
-				<!-- Iterasi ini buat tiap result
+				<!-- Iterasi ini buat tiap result-->
 					<%
-						for (int i = 0; i <3; i++) {
+                                            ArrayList<TemporaryObject> list = (ArrayList<TemporaryObject>) session.getAttribute("tempatWisata");
+                                            String urlimage="images/page4_img3.jpg";
+                                            String lokasi="tes";
+						for (int i = 0; i < list.size(); i++) {
 						out.print("<div id=\"resultbox\">");
 						out.print("	<a href=\"#\" class=\"resultbox\">");
 						out.print("		<figure class=\"left marg_right1\"><img src=\""+urlimage+"\" alt=\"\"></figure>");
-						out.print("		<div id=\"resultplace\">"+nama tempat+"</div>");
+						out.print("		<div id=\"resultplace\">"+list.get(i).get(1)+"</div>");
 						out.print("		<div id=\"resultlocation\">"+lokasi+"</div>");
 						out.print("	</a>");
 						out.print("</div>");
 						}
-					%> -->
+					%>
 				</div>
 			</div>
 		</article>

@@ -16,6 +16,10 @@ public class TempatWisataModel {
     String query;
     DBConnector db;
     
+    public TempatWisataModel(){
+        db = new DBConnector();
+    }
+    
     public ArrayList<TemporaryObject> getAllActiveTempatWisata(){
         query = "select * from tempat_wisata where status = '1'";
         return db.selectQuery(query);
@@ -57,5 +61,9 @@ public class TempatWisataModel {
         query = "update tempat_wisata set nama = '"+nama+"' and kota = '"+kota+"' and provinsi = '"+provinsi
                 +"' and tipe='"+tipe+"' where id = '" + id + "'";
         db.query(query);
+    }
+    public ArrayList<TemporaryObject> getTempatWisataByKey(String key){
+        query = "select * from tempat_wisata where nama LIKE '%"+key+"%'";
+        return db.selectQuery(query);
     }
 }
