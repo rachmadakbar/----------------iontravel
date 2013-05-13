@@ -4,8 +4,10 @@
  */
 package controller;
 
+import helper.TemporaryObject;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +20,7 @@ import model.UserModel;
  * @author inassjunus
  */
 public class EditProfile extends HttpServlet {
+
     private String oldPassword;
     private String password;
     private String password2;
@@ -26,7 +29,7 @@ public class EditProfile extends HttpServlet {
     private String alamat;
     private String email;
     private String username;
-    
+
     private int checkLogin(HttpServletRequest request) {
         int status = 0;
         if (this.oldPassword.length() < 1) {
@@ -55,6 +58,17 @@ public class EditProfile extends HttpServlet {
         return status;
     }
     
+        private int checkNama() {
+        int status = 0;
+        String NAME_PATTERN = "([a-zA-Z]+ +)*[a-zA-Z]+";
+        if (this.nama.length() < 1) {
+            status = 1;
+        } else if (!this.nama.matches(NAME_PATTERN)) {
+            status = 2;
+        }
+        return status;
+    }
+
     private int checkEmail() {
         int status = 0;
         String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
@@ -62,17 +76,6 @@ public class EditProfile extends HttpServlet {
         if (this.email.length() < 1) {
             status = 1;
         } else if (!this.email.matches(EMAIL_PATTERN)) {
-            status = 2;
-        }
-        return status;
-    }
-
-    private int checkNama() {
-        int status = 0;
-        String NAME_PATTERN = "([a-zA-Z]+ +)*[a-zA-Z]+";
-        if (this.nama.length() < 1) {
-            status = 1;
-        } else if (!this.nama.matches(NAME_PATTERN)) {
             status = 2;
         }
         return status;
@@ -99,7 +102,7 @@ public class EditProfile extends HttpServlet {
         }
         return status;
     }
-    
+
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -115,20 +118,62 @@ public class EditProfile extends HttpServlet {
         this.oldPassword = request.getParameter("pwdOld");
         this.password = request.getParameter("pwd");
         this.password2 = request.getParameter("pwd2");
+        this.nama = request.getParameter("name");
         this.alamat = request.getParameter("addr");
         this.telp = request.getParameter("phone");
         this.email = request.getParameter("email");
-        
-        if (this.checkLogin(request) == 0) {
-            if (this.checkPassword() == 1) {
-                
+        boolean allIsWell = true;
+        if (this.checkLogin(request) == 0 && allIsWell) {
+            UserModel user = new UserModel();
+            ArrayList<TemporaryObject> resultSet = user.getUser(username, oldPassword);
+            TemporaryObject userDetails = resultSet.get(0);
+                    int[] data = new int[5];
+
+        data[0] = this.checkPassword();
+        data[1] = this.checkNama();
+        data[2] = this.checkEmail();
+        data[3] = this.checkAddress();
+        data[4] = this.checkTelp();
+            if (data[0] == 1) {
+                this.password = userDetails.get(1);
+            } else if (data[0] == 2 && data[0] == 3) {
+                allIsWell = false;
+            }
+            if (data[3] == 1) {
+                this.alamat = userDetails.get(3);
+            } else if (data[3] == 2) {
+                allIsWell = false;
+            }
+            
+            if (data[1] == 1) {
+                this.nama = userDetails.get(2);
+            } else if (data[1] == 2) {
+                allIsWell = false;
+            }
+            
+            if (data[2] == 1) {
+                this.email = userDetails.get(4);
+            } else if (data[2] == 2) {
+                allIsWell = false;
+            }
+
+            if (data[4] == 1) {
+                this.telp = userDetails.get(5);
+            } else if (data[4] == 2) {
+                allIsWell = false;
+            }
+            if (allIsWell) {
+                user.updateCustomer(username, password, nama, alamat, email, telp);
+                request.setAttribute("update", "Update data berhasil!!");
+            } else {
+                request.setAttribute("update", "Format data salah!");
             }
         } else {
-            
+            request.setAttribute("update", "Mohon isi password Anda!");
         }
-        
-        
-        
+
+
+
 //        response.setContentType("text/html;charset=UTF-8");
 //        PrintWriter out = response.getWriter();
 //        try {
