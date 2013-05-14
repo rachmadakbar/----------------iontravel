@@ -18,7 +18,12 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/atooltip.jquery.js"></script>
 <script type="text/javascript" src="js/jquery.paginate.js"></script>
-
+<script type="text/javascript">
+function notRegistered() {
+	document.getElementById('light').style.display='block';
+	document.getElementById('fade').style.display='block'
+}
+</script>
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="js/html5.js"></script>
 	<style type="text/css">
@@ -32,6 +37,9 @@
 <![endif]-->
 </head>
 <body id="page1">
+	<div id="light" class="white_content">
+	<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+	<div id="fade" class="black_overlay"></div>
 <div class="body6">
 	<div class="body1">
 		<div class="body5">
@@ -41,7 +49,7 @@
 					<h1><a href="index.html" id="logo">ION Travel</a></h1>
 					<nav>
 						<ul id="top_nav">
-							<li class="active"><a href="Home.jsp"><img src="images/icon_1.gif" alt=""></a></li>
+							<li><a href="Home.jsp"><img src="images/icon_1.gif" alt=""></a></li>
 							<li><a href="About.jsp"><img src="images/icon_2.gif" alt=""></a></li>
 							<li id="end"><a href="Contact_Us.jsp"><img src="images/icon_3.gif" alt=""></a></li>
 						</ul>
@@ -49,9 +57,16 @@
 					<nav>
 						<ul id="menu">
 							<li><a href="Hotel.jsp">Hotel</a></li>
-							<li><a href="Transportation.jsp">Transportasi</a></li>
+							<li><a href="Transportation.jsp">Transportasi</a>
+								<ul>
+									<li><a href="#">Pesawat</a></li>
+									<li><a href="#">Kapal</a></li>
+									<li><a href="#">Kereta Api</a></li>
+									<li><a href="#">Bus</a></li>
+								</ul>
+							</li>
 							<li><a href="Town.jsp">Kota</a></li>
-							<li><a href="Promo.jsp">Promo</a></li>
+							<li class="active"><a href="Promo.jsp">Promo</a></li>
 						</ul>
 					</nav>
 				</header><div class="ic">More Website Templates  @ TemplateMonster.com - August 1st 2011!</div>
@@ -114,7 +129,7 @@
 						</section>
 						<section class="cols pad_left1">
 							<div class="box">
-								<div id="home_box">
+								<div id="home_box" class="register">
 									<h2>Registrasi</h2>
 									<div id="home_box_content">
 										<p class="pad_bot1">Belum terdaftar sebagai customer? Mendaftarlah sebagai customer untuk mengakses promo-promo istimewa ION Travel!</p>
@@ -125,7 +140,7 @@
 						</section>
 						<section class="cols pad_left1">
 							<div class="box" >
-								<div id="home_box">
+								<div id="home_box" class="login">
 									<h2>Log<span>in</span></h2>
 									<form action="#" name="login">
 										<div id="home_box_content">
@@ -157,7 +172,7 @@
 				<div class="page" id="pages" >
 					
 					<div class="wrapper">
-						<div id="p1" class="pagedemo _current" style="">
+						<div id="p1" class="page _current">
 							<div id="pack_box">
 								<div id="pack">
 									<img src="images/pack1.jpg" />
@@ -166,7 +181,7 @@
 									6 - 7 April 2013 </br>
 									Bus, 01.00 - 22.00 WIB 
 									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
+									<a href = "#" onclick = "notRegistered()" class="button1">Book</a>
 								</div>
 								<div id="pack">
 									<img src="images/pack1.jpg" />
@@ -197,7 +212,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="p2" class="pagedemo" style="display:none;">
+						<div id="p2" class="page" style="display:none;">
 							<div id="pack_box">
 								<div id="pack">
 									<img src="images/pack1.jpg" />
@@ -208,8 +223,6 @@
 									</article>
 									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
 								</div>
-							</div>
-							<div id="pack_box">
 								<div id="pack">
 									<img src="images/pack1.jpg" />
 									<h3>Depok - Jakarta</h3>
@@ -219,8 +232,6 @@
 									</article>
 									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
 								</div>
-							</div>
-							<div id="pack_box">
 								<div id="pack">
 									<img src="images/pack1.jpg" />
 									<h3>Depok - Jakarta</h3>
@@ -230,8 +241,6 @@
 									</article>
 									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
 								</div>
-							</div>
-							<div id="pack_box">
 								<div id="pack">
 									<img src="images/pack1.jpg" />
 									<h3>Depok - Jakarta</h3>
@@ -243,14 +252,14 @@
 								</div>
 							</div>
 						</div>
-						<div id="p3" class="pagedemo" style="display:none;">Page 3</div>
-						<div id="p4" class="pagedemo" style="display:none;">Page 4</div>
-						<div id="p5" class="pagedemo" style="display:none;">Page 5</div>
-						<div id="p6" class="pagedemo" style="display:none;">Page 6</div>
-						<div id="p7" class="pagedemo" style="display:none;">Page 7</div>
-						<div id="p8" class="pagedemo" style="display:none;">Page 8</div>
-						<div id="p9" class="pagedemo" style="display:none;">Page 9</div>
-						<div id="p10" class="pagedemo" style="display:none;">Page 10</div>
+						<div id="p3" class="page" style="display:none;">Page 3</div>
+						<div id="p4" class="page" style="display:none;">Page 4</div>
+						<div id="p5" class="page" style="display:none;">Page 5</div>
+						<div id="p6" class="page" style="display:none;">Page 6</div>
+						<div id="p7" class="page" style="display:none;">Page 7</div>
+						<div id="p8" class="page" style="display:none;">Page 8</div>
+						<div id="p9" class="page" style="display:none;">Page 9</div>
+						<div id="p10" class="page" style="display:none;">Page 10</div>
 					</div>
 				</div>
 				<div class="wrapper">
@@ -262,11 +271,11 @@
 								start 		: 1,
 								display     : 7,
 								border					: true,
-								border_color			: '#fff',
+								border_color			: '#055702',
 								text_color  			: '#fff',
-								background_color    	: 'black',	
+								background_color    	: '#055702',	
 								border_hover_color		: '#ccc',
-								text_hover_color  		: '#000',
+								text_hover_color  		: '#055702',
 								background_hover_color	: '#fff', 
 								images					: false,
 								mouse					: 'press',
@@ -277,7 +286,7 @@
 							});
 						});
 						</script>		
-						<div id="pagination"></div>						
+						<div id="pagination" class="paging"></div>						
 					</div>
 				</div>
 			</section>
