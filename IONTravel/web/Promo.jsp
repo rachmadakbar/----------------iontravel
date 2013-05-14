@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ION Travel</title>
+<title>Promo</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="css/mystyle.css" type="text/css" media="all">
@@ -19,9 +19,36 @@
 <script type="text/javascript" src="js/atooltip.jquery.js"></script>
 <script type="text/javascript" src="js/jquery.paginate.js"></script>
 <script type="text/javascript">
+
+$(function() {
+	$("#pagination").paginate({
+		count 		: 10,
+		start 		: 1,
+		display     : 7,
+		border					: true,
+		border_color			: '#055702',
+		text_color  			: '#fff',
+		background_color    	: '#055702',	
+		border_hover_color		: '#ccc',
+		text_hover_color  		: '#055702',
+		background_hover_color	: '#fff', 
+		images					: false,
+		mouse					: 'press',
+		onChange     			: function(page){
+									$('._current','#pages').removeClass('_current').hide();
+									$('#p'+page).addClass('_current').show();
+								  }
+	});
+});
+
 function notRegistered() {
 	document.getElementById('light').style.display='block';
 	document.getElementById('fade').style.display='block'
+}
+
+function closeLightBox() {	
+	document.getElementById('light').style.display='none';
+	document.getElementById('fade').style.display='none'
 }
 </script>
 <!--[if lt IE 9]>
@@ -38,7 +65,30 @@ function notRegistered() {
 </head>
 <body id="page1">
 	<div id="light" class="white_content">
-	<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+		<div><a href="javascript:void(0)" onclick = "closeLightBox()">Close</a></div>
+		<div class="lightbox_ct">
+			<h2>Login</h2>
+			<div id="lb_login">
+				<form action="#" name="login">
+					<div id="home_box_content">
+						<span>Untuk dapat melakukan book, Anda harus login terlebih dahulu.</span>
+						<ul>		
+							<li><label>Username</label></li>
+							<li><input type="text" name="username"></li>
+							<li><label>Password</label></li>
+							<li><input type="password" name="password"></li>
+						</ul>
+					</div>
+					<input type="submit" class="button1" id="home_button" value="Login">
+				</form>
+			</div>
+			<div id="lb_reg">
+				<span>Belum terdaftar sebagai pelanggan? <br>
+				Mendaftarlah sebagai pelanggan untuk mengakses promo-promo istimewa ION Travel!</span>
+				<form><input type="submit" class="button1" id="home_button" value="Daftar"></form>
+			</div>
+		</div>
+	</div>
 	<div id="fade" class="black_overlay"></div>
 <div class="body6">
 	<div class="body1">
@@ -132,7 +182,7 @@ function notRegistered() {
 								<div id="home_box" class="register">
 									<h2>Registrasi</h2>
 									<div id="home_box_content">
-										<p class="pad_bot1">Belum terdaftar sebagai customer? Mendaftarlah sebagai customer untuk mengakses promo-promo istimewa ION Travel!</p>
+										<p class="pad_bot1">Belum terdaftar sebagai pelanggan? Mendaftarlah sebagai pelanggan untuk mengakses promo-promo istimewa ION Travel!</p>
 									</div>
 									<a href="#" class="button1" id="home_button" onClick="document.getElementById('######').submit()">Daftar</a>
 								</div>
@@ -181,76 +231,13 @@ function notRegistered() {
 									6 - 7 April 2013 </br>
 									Bus, 01.00 - 22.00 WIB 
 									</article>
-									<a href = "#" onclick = "notRegistered()" class="button1">Book</a>
+									<a href = "javascript:void(0)" onclick = "notRegistered()" class="button1">Book</a>
 								</div>
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jaya Wijaya</h3>
-									<article>
-									6 - 7 April 2013 </br>
-									Bus, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>							
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jaya Wijaya</h3>
-									<article>
-									6 - 7 April 2013 </br>
-									Bus, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>							
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jaya Wijaya</h3>
-									<article>
-									6 - 7 April 2013 </br>
-									Bus, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>
+								
 							</div>
 						</div>
 						<div id="p2" class="page" style="display:none;">
-							<div id="pack_box">
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jakarta</h3>
-									<article>
-									22 - 30 Mei 2013 </br>
-									Pesawat, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jakarta</h3>
-									<article>
-									22 - 30 Mei 2013 </br>
-									Pesawat, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jakarta</h3>
-									<article>
-									22 - 30 Mei 2013 </br>
-									Pesawat, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>
-								<div id="pack">
-									<img src="images/pack1.jpg" />
-									<h3>Depok - Jakarta</h3>
-									<article>
-									22 - 30 Mei 2013 </br>
-									Pesawat, 01.00 - 22.00 WIB 
-									</article>
-									<a href="#" class="button1" onClick="document.getElementById('######').submit()">Book</a>
-								</div>
-							</div>
+							
 						</div>
 						<div id="p3" class="page" style="display:none;">Page 3</div>
 						<div id="p4" class="page" style="display:none;">Page 4</div>
@@ -263,29 +250,7 @@ function notRegistered() {
 					</div>
 				</div>
 				<div class="wrapper">
-					<div  class="right">
-						<script type="text/javascript">
-						$(function() {
-							$("#pagination").paginate({
-								count 		: 10,
-								start 		: 1,
-								display     : 7,
-								border					: true,
-								border_color			: '#055702',
-								text_color  			: '#fff',
-								background_color    	: '#055702',	
-								border_hover_color		: '#ccc',
-								text_hover_color  		: '#055702',
-								background_hover_color	: '#fff', 
-								images					: false,
-								mouse					: 'press',
-								onChange     			: function(page){
-															$('._current','#pages').removeClass('_current').hide();
-															$('#p'+page).addClass('_current').show();
-														  }
-							});
-						});
-						</script>		
+					<div  class="right">	
 						<div id="pagination" class="paging"></div>						
 					</div>
 				</div>
