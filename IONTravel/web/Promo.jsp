@@ -46,10 +46,17 @@ function notRegistered() {
 	document.getElementById('fade').style.display='block'
 }
 
+function registered() {
+	document.getElementById('book').style.display='block';
+	document.getElementById('fade').style.display='block'
+}
+
 function closeLightBox() {	
 	document.getElementById('light').style.display='none';
-	document.getElementById('fade').style.display='none'
+	document.getElementById('fade').style.display='none';
+	document.getElementById('book').style.display='none';
 }
+
 </script>
 <!--[if lt IE 9]>
 	<script type="text/javascript" src="js/html5.js"></script>
@@ -76,16 +83,35 @@ function closeLightBox() {
 							<li><label>Username</label></li>
 							<li><input type="text" name="username"></li>
 							<li><label>Password</label></li>
-							<li><input type="password" name="password"></li>
+							<li><input type="password" name="password"></li>					
+							<li><input type="submit" class="button1" id="home_button" value="Login" /></li>
 						</ul>
 					</div>
-					<input type="submit" class="button1" id="home_button" value="Login">
 				</form>
 			</div>
 			<div id="lb_reg">
 				<span>Belum terdaftar sebagai pelanggan? <br>
 				Mendaftarlah sebagai pelanggan untuk mengakses promo-promo istimewa ION Travel!</span>
 				<form><input type="submit" class="button1" id="home_button" value="Daftar"></form>
+			</div>
+		</div>
+	</div>
+	<div id="book" class="white_content">
+		<div><a href="javascript:void(0)" onclick = "closeLightBox()">Close</a></div>
+		<div class="lightbox_ct">
+			<h2>Book Paket</h2>
+			<div id="lb_login">
+				<form action="#" name="book">
+					<div id="home_box_content">
+						<ul>		
+							<li><label><span>Tanggal</span></label></li>
+							<li><input type="date" name="username"></li>
+							<li><label><span>Jumlah Tiket</span></label></li>
+							<li><input type="number" name="password"></li>
+						</ul>
+					</div>
+					<input type="submit" class="button1" id="home_button" value="Book" />
+				</form>
 			</div>
 		</div>
 	</div>
@@ -106,7 +132,13 @@ function closeLightBox() {
 					</nav>
 					<nav>
 						<ul id="menu">
-							<li><a href="Hotel.jsp">Hotel</a></li>
+							<li><a href="Hotel.jsp">Hotel</a>
+								<ul>
+									<li><a href="#">Ekonomi</a></li>
+									<li><a href="#">Bisnis</a></li>
+									<li><a href="#">VIP</a></li>
+								</ul>
+							</li>
 							<li><a href="Transportation.jsp">Transportasi</a>
 								<ul>
 									<li><a href="#">Pesawat</a></li>
@@ -233,7 +265,15 @@ function closeLightBox() {
 									</article>
 									<a href = "javascript:void(0)" onclick = "notRegistered()" class="button1">Book</a>
 								</div>
-								
+								<div id="pack">
+									<img src="images/pack1.jpg" />
+									<h3>Depok - Jaya Wijaya</h3>
+									<article>
+									6 - 7 April 2013 </br>
+									Bus, 01.00 - 22.00 WIB 
+									</article>
+									<a href = "javascript:void(0)" onclick = "registered()" class="button1">Book</a>
+								</div>
 							</div>
 						</div>
 						<div id="p2" class="page" style="display:none;">
