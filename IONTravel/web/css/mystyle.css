@@ -160,8 +160,14 @@ margin-top:20px; float:right
 }
 
 
-/* paket_perjalanan */
+/* kota */
 
+#page_town #pack_box { width: 950px; margin: 0 auto;}
+#page_town #pack { width: 290px; margin: 10px; }
+#page_town #pack img { width: 290px; }
+#page_town #pack span { color:#055702; font-size:x-large; float:right}
+#page_town .btn_town_edit { background:transparent; margin: 1px 1px; padding: 1px 1px; margin-top:-2px; margin-right:5px }
+#page_town .btn_town_edit:hover { background:transparent; text-decoration:none }
 
 
 /************* jPaginate Style *******************/
