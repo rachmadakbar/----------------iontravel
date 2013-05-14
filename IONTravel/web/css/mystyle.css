@@ -1,4 +1,3 @@
-
 /* home */
 
 #home_button {
@@ -36,6 +35,8 @@
 #pack a:hover { background:#fff; color:#055702}
 #pack span { } 
 
+#login_link { color:#fff; font-size:15pt; margin: 10px 10px; float: right; display:inline-block }
+#login_link:hover { color:#a80002; text-decoration:none}
 
 /* promo */
  
