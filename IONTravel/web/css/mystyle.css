@@ -68,7 +68,7 @@ nav ul li:hover > ul {
 
 .lightbox_ct {
 	margin: 0 auto;
-	width: 400px;
+	width: 300px;
 }
 .white_content a {
 	margin-top: 5px;
@@ -80,10 +80,12 @@ nav ul li:hover > ul {
 .lightbox_ct h2 { padding: 0 0; margin: 0 0; color:#a80002 }
 .lightbox_ct label { color:#a80002 }
 .lightbox_ct span { margin: 3px 0; color:#fff }
-.lightbox_ct #lb_login {height:150px; margin-bottom:5px}
+#lb_login {height:180px; margin-bottom:20px}
+#lb_login #home_button {margin-top:10px; margin-bottom:10px}
 #lb_reg {height:80px; margin-bottom:5px; padding-top:10px}
-#lb_reg form{margin-top:2px}
+#lb_reg form{ margin-top:2px}
 #lb_reg span { margin-top:5px}
+#lb_reg #home_button {margin-top:5px;}
 
 /* register */
 
@@ -292,8 +294,8 @@ span.jPag-snext-img{
 .white_content {
     display: none;
     position: fixed;
-	width: 35%;
-	height: 65%;
+	width: 30%;
+	padding: 15px 5px;
     top: 15%; 
 	left: 33%; 
 	background:url(../images/box_bg.png) repeat;
