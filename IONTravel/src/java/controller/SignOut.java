@@ -32,7 +32,7 @@ public class SignOut extends HttpServlet {
                 HttpSession signIn = request.getSession(true);
                 signIn.setAttribute("username", "");
                 signIn.setAttribute("role", "");
-                request.getRequestDispatcher("/index.jsp").forward(request, response);
+                request.getRequestDispatcher("/Home.jsp").forward(request, response);
     }
 //        response.setContentType("text/html;charset=UTF-8");
 //        PrintWriter out = response.getWriter();
