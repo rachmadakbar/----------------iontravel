@@ -66,6 +66,25 @@ nav ul li:hover > ul {
 	z-index: 5;
 }
 
+.lightbox_ct {
+	margin: 0 auto;
+	width: 400px;
+}
+.white_content a {
+	margin-top: 5px;
+	margin-left: 5px;
+	color: #fff;
+	font-size:13pt
+}
+.white_content #home_box_content { margin: 0 0; }
+.lightbox_ct h2 { padding: 0 0; margin: 0 0; color:#a80002 }
+.lightbox_ct label { color:#a80002 }
+.lightbox_ct span { margin: 3px 0; color:#fff }
+.lightbox_ct #lb_login {height:150px; margin-bottom:5px}
+#lb_reg {height:80px; margin-bottom:5px; padding-top:10px}
+#lb_reg form{margin-top:2px}
+#lb_reg span { margin-top:5px}
+
 /* register */
 
 #input_signup {
@@ -273,10 +292,10 @@ span.jPag-snext-img{
 .white_content {
     display: none;
     position: fixed;
-	width: 50%;
-	height:50%;
-    top: 25%;
-    left: 25%;
+	width: 35%;
+	height: 65%;
+    top: 15%; 
+	left: 33%; 
 	background:url(../images/box_bg.png) repeat;
     z-index:1002;
     overflow: auto;
